@@ -1,35 +1,30 @@
-# A short description of the tile
+# A tile to display weather using AccuWeather API
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor/:package_name/run-tests?label=tests)](https://github.com/:vendor/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/marcusmyers/laravel-dashboard-accuweather-tile.svg?style=flat-square)](https://packagist.org/packages/marcusmyers/laravel-dashboard-accuweather-tile)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/marcusmyers/laravel-dashboard-accuweather-tile/run-tests?label=tests)](https://github.com/marcusmyers/laravel-dashboard-accuweather-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/marcusmyers/laravel-dashboard-accuweather-tile.svg?style=flat-square)](https://packagist.org/packages/marcusmyers/laravel-dashboard-accuweather-tile)
 
-A friendly explanation of what your tile does.
+Much like Spatie's [laravel-dashboard-time-weather-tile](https://github.com/spatie/laravel-dashboard-time-weather-tile), but uses AccuWeather.
 
-This tile can be used on [the Laravel Dashboard]https://docs.spatie.be/laravel-dashboard).
+This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-dashboard).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor/:package_name
+composer require marcusmyers/laravel-dashboard-accuweather-tile
 ```
 
 ## Usage
 
-In your dashboard view you use the `livewire:my-tile` component.
+In your dashboard view you can use the `livewire:accuweather-current-conditions-tile` component or the `livewire:accuweather-five-day-forecast-tile`.
 
 ```html
 <x-dashboard>
-    <livewire:my-tile position="e7:e16" />
+    <livewire:accuweather-current-conditions-tile position="e1:e4" />
+    <livewire:accuweather-five-day-forecast-tile position="a14:d16" />
 </x-dashboard>
-```
-
-## Testing
-
-``` bash
-composer test
 ```
 
 ## Changelog

@@ -1,35 +1,32 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "marcusmyers/laravel-dashboard-accuweather-tile",
+    "description": "An AccuWeather Tile for Laravel Dashboard",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "marcusmyers",
+        "laravel-dashboard-accuweather-tile"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/marcusmyers/laravel-dashboard-accuweather-tile",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://:vendor.be",
+            "name": "Mark Myers",
+            "email": "marcusmyers@gmail.com",
+            "homepage": "https://emoxter.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.4",
-        ":vendor/laravel-dashboard": "^1.0"
+        "spatie/laravel-dashboard": "^1.0"
     },
     "require-dev": {
+        "guzzlehttp/guzzle": "^6.5",
+        "orchestra/testbench": "^5.0",
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\MyTile\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Spatie\\MyTile\\Tests\\": "tests"
+            "MarcusMyers\\AccuWeatherTile\\": "src"
         }
     },
     "scripts": {
@@ -43,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\MyTile\\MyTileServiceProvider"
+                "MarcusMyers\\AccuWeatherTile\\AccuWeatherServiceProvider"
             ]
         }
     },
