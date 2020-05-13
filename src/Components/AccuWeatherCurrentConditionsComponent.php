@@ -20,6 +20,8 @@ class AccuWeatherCurrentConditionsComponent extends Component
 
     public function render()
     {
-        return view('dashboard-accuweather-tiles::current-conditions.tile');
+        return view('dashboard-accuweather-tiles::current-conditions.tile', [
+          'refreshIntervalInSeconds' => config('dashboard.tiles.accuweather.refresh_interval_in_seconds') ?? 60,
+        ]);
     }
 }
