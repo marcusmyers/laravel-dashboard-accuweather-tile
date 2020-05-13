@@ -2,7 +2,7 @@
     <div class="w-full h-full">
         <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide tabular-nums">Forecast</h1>
 
-        <div class="flex justify-between h-full">
+        <div class="flex justify-between h-full" wire:poll.{{ $refreshIntervalInSeconds }}s>
             @foreach($forecasts['DailyForecasts'] as $forecast)
             <div class="p-2">
                 <h1 class="font-medium text-dimmed text-sm uppercase text-center tracking-wide tabular-nums">{{ date('m/d', strtotime($forecast['Date'])) }}</h1>
