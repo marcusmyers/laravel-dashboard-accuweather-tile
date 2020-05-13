@@ -4,7 +4,7 @@
 
         <div class="self-center font-bold text-4xl tracking-wide leading-none" x-text="time"></div>
 
-        <div wire:poll.600s class="uppercase">
+        <div wire:poll.{{ $refreshIntervalInSeconds }}s class="uppercase">
             <div class="flex w-full justify-center space-x-4 items-center">
                 <span>
                     {{ $weatherConditions['Temperature']['Imperial']['Value'] }}°
