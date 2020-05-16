@@ -10,18 +10,17 @@ class AccuWeatherCurrentConditionsComponent extends Component
 {
     /** @var string */
     public $position;
-    public $weatherConditions;
 
     public function mount(string $position)
     {
         $this->position = $position;
-        $this->weatherConditions = AccuWeatherStore::make()->currentConditions();
     }
 
     public function render()
     {
         return view('dashboard-accuweather-tiles::current-conditions.tile', [
           'refreshIntervalInSeconds' => config('dashboard.tiles.accuweather.refresh_interval_in_seconds') ?? 60,
+          'weatherConditions' => AccuWeatherStore::make()->currentConditions()
         ]);
     }
 }

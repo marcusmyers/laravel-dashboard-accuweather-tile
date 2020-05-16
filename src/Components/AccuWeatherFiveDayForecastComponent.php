@@ -10,18 +10,17 @@ class AccuWeatherFiveDayForecastComponent extends Component
 {
     /** @var string */
     public $position;
-    public $forecasts;
 
     public function mount(string $position)
     {
         $this->position = $position;
-        $this->forecasts = AccuWeatherStore::make()->forecasts();
     }
 
     public function render()
     {
         return view('dashboard-accuweather-tiles::five-day-forecast.tile', [
           'refreshIntervalInSeconds' => config('dashboard.tiles.accuweather.refresh_interval_in_seconds') ?? 60,
+          'forecasts' => AccuWeatherStore::make()->forecasts(),
         ]);
     }
 }
