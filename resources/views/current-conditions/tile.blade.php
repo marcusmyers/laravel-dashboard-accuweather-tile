@@ -7,7 +7,7 @@
         <div wire:poll.{{ $refreshIntervalInSeconds }}s class="uppercase">
             <div class="flex w-full justify-center space-x-4 items-center">
                 <span>
-                    {{ $weatherConditions['Temperature']['Imperial']['Value'] }}°
+                    {{ $weatherConditions['Temperature'][config('dashboard.tiles.accuweather.system')]['Value'] }}°
                     <br>
                     <span class="text-sm uppercase text-dimmed">{{ $weatherConditions['WeatherText'] }} </span>
                 </span>
