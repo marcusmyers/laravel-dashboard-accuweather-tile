@@ -17,8 +17,17 @@ class AccuWeather
 
     public static function getFiveDayForcast(string $locationKey, string $apiKey)
     {
-        $endpoint = self::API_URL . "/forecasts/v1/daily/5day/{$locationKey}?apikey={$apiKey}";
+        $endpoint = self::API_URL . "/forecasts/v1/daily/5day/{$locationKey}?apikey={$apiKey}&metric=" . self::getMetricUrlValue();
 
         return Http::get($endpoint)->json();
+    }
+
+    public static function getMetricUrlValue()
+    {
+        if (config('dashboard.tiles.accuweather.system') == 'Metric') {
+            return 'true';
+        } else {
+            return 'false';
+        }
     }
 }

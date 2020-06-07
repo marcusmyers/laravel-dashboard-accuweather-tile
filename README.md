@@ -21,6 +21,8 @@ In the `dashboard` config file, you must add this configuration in the `tiles` k
 
 Sign up at https://developer.accuweather.com/ to obtain `ACCUWEAHTER_API_KEY` and you can find your location key by searching for you city at https://www.accuweather.com.  The resulting url should have your location key, i.e. https://www.accuweather.com/en/us/chicago/60608/weather-forecast/348308, the Chicago location key is 348308. AccuWeather only allows you 50 API request a day for a free account.
 
+The data can be displayed as either Imperial (Farenheit) or Metric (Celsis). This will affect information displayed on the daily tile and forecast tiles.
+
 ```php
 // in config/dashboard.php
 
@@ -30,6 +32,7 @@ return [
         'accuweather' => [
             'location_key' => '12345',
             'api_key' => env('ACCUWEATHER_API_KEY'),
+            'system' => 'Metric',
         ]
     ],
 ];
