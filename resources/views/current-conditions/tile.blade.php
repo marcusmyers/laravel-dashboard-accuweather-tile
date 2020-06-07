@@ -34,8 +34,13 @@
                         })
                         .substr(0, 3);
                     const date = [
-                        this.dateTime.getMonth() + 1,
-                        this.dateTime.getDate(),
+                        @if (config('dashboard.tiles.accuweather.date_format') == 'm/d')
+                            this.dateTime.getMonth() + 1,
+                            this.dateTime.getDate(),
+                        @else
+                            this.dateTime.getDate(),
+                            this.dateTime.getMonth() + 1,
+                        @endif
                     ].map(this.padNumber).join('/');
                     return `${day} ${date}`;
                 },

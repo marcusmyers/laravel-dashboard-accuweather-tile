@@ -5,7 +5,7 @@
         <div class="flex justify-between h-full" wire:poll.{{ $refreshIntervalInSeconds }}s>
             @foreach($forecasts['DailyForecasts'] as $forecast)
             <div class="p-2">
-                <h1 class="font-medium text-dimmed text-sm uppercase text-center tracking-wide tabular-nums">{{ date('m/d', strtotime($forecast['Date'])) }}</h1>
+                <h1 class="font-medium text-dimmed text-sm uppercase text-center tracking-wide tabular-nums">{{ date(config('dashboard.tiles.accuweather.date_format'), strtotime($forecast['Date'])) }}</h1>
                 <div class="flex w-full justify-center space-x-4 items-center">
                     <span>
                         {{ $forecast['Temperature']['Maximum']['Value'] }}°
