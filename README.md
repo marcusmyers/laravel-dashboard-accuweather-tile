@@ -23,6 +23,8 @@ Sign up at https://developer.accuweather.com/ to obtain `ACCUWEAHTER_API_KEY` an
 
 The data can be displayed as either Imperial (Farenheit) or Metric (Celsis). This will affect information displayed on the daily tile and forecast tiles.
 
+It is also possible to change the date format of the tiles. Valid formats are m/d or d/m.
+
 ```php
 // in config/dashboard.php
 
@@ -33,6 +35,7 @@ return [
             'location_key' => '12345',
             'api_key' => env('ACCUWEATHER_API_KEY'),
             'system' => 'Metric',
+            'date_format' => 'd/m',
         ]
     ],
 ];
