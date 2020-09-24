@@ -17,11 +17,9 @@
     ],
     "require": {
         "php": "^7.4",
-        "spatie/laravel-dashboard": "^1.0"
+        "spatie/laravel-dashboard": "^2.0"
     },
     "require-dev": {
-        "guzzlehttp/guzzle": "^6.5",
-        "orchestra/testbench": "^5.0",
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
